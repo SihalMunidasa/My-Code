@@ -2,7 +2,7 @@
 import random
 import math
 
-
+#Creating a function that error handles when user inputs a number for the game
 def number_input(message):
     while True:
         try:
