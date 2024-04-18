@@ -2,8 +2,8 @@
 import random
 import math
 
-#Creating a function that error handles when user inputs a number for the game
-def number_input(message):
+
+def number_input(message): #Creating a function to handle error when user enters a number
     while True:
         try:
             number = int(input(message))
@@ -39,8 +39,9 @@ def game(lower, upper): #Main game functionality code
                 user_input = number_input("\nEnter your guess: ")
                 if user_input < lower or user_input > upper:
                     print("Your guess is out of the range!")
+                    continue
+                guess_count += 1
                 elif user_input < random_number or user_input > random_number:
-                    guess_count += 1
                     if user_input < random_number: 
                         print("I would aim higher if I were you...")
                     elif user_input > random_number:
