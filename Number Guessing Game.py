@@ -39,9 +39,9 @@ def game(lower, upper): #Main game functionality code
                 user_input = number_input("\nEnter your guess: ")
                 if user_input < lower or user_input > upper:
                     print("Your guess is out of the range!")
-                    continue
-                guess_count += 1
+    
                 elif user_input < random_number or user_input > random_number:
+                    guess_count += 1
                     if user_input < random_number: 
                         print("I would aim higher if I were you...")
                     elif user_input > random_number:
@@ -52,6 +52,7 @@ def game(lower, upper): #Main game functionality code
                         print("You lost :( Better luck next time!")
                         break
                 else:
+                    guess_count += 1
                     print("Guess was correct!")
                     print(f"You did it in {guess_count} out of {min_guesses} guesses. Well Done!")
                     break
